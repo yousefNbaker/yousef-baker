@@ -1,0 +1,16 @@
+<h2 style="color:crimson">
+    number of Items = {{tasks.length}}
+</h2>
+
+<input type=" text " #nm (keyup)="handleKeyUp($event) ">
+<input type="number " #qt (keyup)="handleKeyUp($event) ">
+<input type="number " #pr (keyup)="handleKeyUp($event) ">
+<button (click)="addNewTask(nm.value,qt.value,pr.value)" style="background-color:cadetblue"> Add item</button>
+
+<ol>
+    <div class="leftA " *ngFor="let task of tasks " style="text-align:center">
+        {{task.toString()}}
+        <button (click)=" removeTask(task) " style="background-color: green ">  remove </button>
+    </div>
+</ol>
+total cost is :{{t}}
